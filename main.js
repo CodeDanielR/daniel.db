@@ -52,6 +52,27 @@ class Database {
         return true
     }
 
+    static reset(key) {
+        const data = Database.read()
+        if (!key) throw new TypeError("daniel.db => No key specified");
+        if(!data[key]) throw new TypeError(`daniel.db => The key '${key}' not found in the database`)
+        if (isNaN(data[key])) throw new TypeError("daniel.db => Value in the database must be a valid number");
+        data[key] = 0
+        Database.update(data)
+        return true
+    }
+    
+    static subtract(key, value) {
+        const data = Database.read();
+        if (!key) throw new TypeError("daniel.db => No key specified");
+        if (!value) throw new TypeError("daniel.db => No value specified");
+        if (isNaN(value)) throw new TypeError("daniel.db => Value must be a valid number");
+        if (isNaN(data[key]) && data[key]) throw new TypeError("daniel.db => Value in the database must be a valid number");
+        data[key] = data[key] ? data[key] - value : value;
+        Database.update(data);
+        return Database.get(key);
+    }
+    
     static push(key, value) {
         const data = Database.read()
         if(!key) throw new TypeError("daniel.db => No key specified")

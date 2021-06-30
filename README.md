@@ -27,6 +27,16 @@ db.add('joins', 1)
 // If the current value is 1, so the value will be 2.
 ```
 
+*subtract*
+
+```js
+const db = require("daniel.db")
+
+// Subtracting a value from the current value
+db.subtract(`joins`, 1)
+// If the current value is 2, so the value will be 1
+```
+
 *set*
 
 ```js
@@ -93,8 +103,17 @@ db.push(`name`, 'hello') // Will return ['hello'] with 'get' method
 // Done! you can use 'get' method to get the array!
 ```
 
+*reset*
+
+```js
+const db = require("daniel.db")
+// Resets a key (Number)
+db.reset(`joins`)
+// Done! you can use 'get' method to get '0'!
+
 Need help? Contact me!
 Discord: [**.DanielSo#6969**](https://discord.com/users/737232727459495977)
+<br>
 Email:   **randomlyy90@gmail.com**
 
 
