@@ -110,11 +110,11 @@ const db = require("daniel.db")
 // Resets a key (Number)
 db.reset(`joins`)
 // Done! you can use 'get' method to get '0'!
+```
 
 Need help? Contact me!
-Discord: [**.DanielSo#6969**](https://discord.com/users/737232727459495977)
+Discord: https://discord.gg/uVeWXAdvC5
 <br>
-Email:   **randomlyy90@gmail.com**
 
 
 
