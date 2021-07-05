@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const util = require("./src/util");
+const fs = require("fs")
+const path = require("path")
+const util = require("./src/util")
 
 util.checkForUpdates()
 
