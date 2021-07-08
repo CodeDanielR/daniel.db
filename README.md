@@ -27,16 +27,6 @@ db.add('joins', 1)
 // If the current value is 1, so the value will be 2.
 ```
 
-*subtract*
-
-```js
-const db = require("daniel.db")
-
-// Subtracting a value from the current value
-db.subtract(`joins`, 1)
-// If the current value is 2, so the value will be 1
-```
-
 *set*
 
 ```js
@@ -86,11 +76,10 @@ db.deleteAll()
 
 ```js
 const db = require("daniel.db")
-// Get all the data(keys) in a array
-db.all().join("\n")
-/* So, if we saved the key 'name' with the value 'daniel', and we saved the key 'joins' with the value '1' we will get this: 
-name
-joins
+// Get all the data in a array
+db.all().filter(x => x.ID.startsWith(`name`))
+/* Returns: 
+{ ID: 'name', value: ['hello] }
 */
 ```
 
@@ -113,7 +102,7 @@ db.reset(`joins`)
 ```
 
 Need help? Contact me!
-Discord: https://discord.gg/uVeWXAdvC5
+Discord: [**Support Server**](https://discord.gg/aymsQd6VzV)
 <br>
 
 

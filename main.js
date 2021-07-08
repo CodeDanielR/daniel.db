@@ -1,6 +1,6 @@
-const fs = require("fs")
-const path = require("path")
-const util = require("./src/util")
+const fs = require("fs");
+const path = require("path");
+const util = require("./src/util");
 
 class Database {
     static create() {
@@ -52,27 +52,6 @@ class Database {
         return true
     }
 
-    static reset(key) {
-        const data = Database.read()
-        if (!key) throw new TypeError("daniel.db => No key specified");
-        if(!data[key]) throw new TypeError(`daniel.db => The key '${key}' not found in the database`)
-        if (isNaN(data[key])) throw new TypeError("daniel.db => Value in the database must be a valid number");
-        data[key] = 0
-        Database.update(data)
-        return true
-    }
-    
-    static subtract(key, value) {
-        const data = Database.read();
-        if (!key) throw new TypeError("daniel.db => No key specified");
-        if (!value) throw new TypeError("daniel.db => No value specified");
-        if (isNaN(value)) throw new TypeError("daniel.db => Value must be a valid number");
-        if (isNaN(data[key]) && data[key]) throw new TypeError("daniel.db => Value in the database must be a valid number");
-        data[key] = data[key] ? data[key] - value : value;
-        Database.update(data);
-        return Database.get(key);
-    }
-    
     static push(key, value) {
         const data = Database.read()
         if(!key) throw new TypeError("daniel.db => No key specified")
@@ -91,8 +70,14 @@ class Database {
     }
 
     static all() {
-        return Object.keys(Database.read());
-    }
+        for(let i of Object.keys(Database.read())) {
+            newArr.push({ 
+                ID: i, 
+                data: Database.get(i) 
+            }) 
+        }
+        return newArr
+    }   
 
     static set(key, value) {
         const data = Database.read();
@@ -101,6 +86,26 @@ class Database {
         data[key] = value;
         Database.update(data);
         return Database.get(key);
+    }
+
+    static subtract(key, value) {
+        const data = Database.read();
+        if (!key) throw new TypeError("daniel.db => No key specified");
+        if (!value) throw new TypeError("daniel.db => No value specified");
+        if (isNaN(value)) throw new TypeError("daniel.db => Value must be a valid number");
+        if (isNaN(data[key]) && data[key]) throw new TypeError("daniel.db => Value in the database must be a valid number");
+        data[key] = data[key] ? data[key] - value : value;
+        Database.update(data);
+        return Database.get(key);
+    }
+    static reset(key) {
+        const data = Database.read()
+        if (!key) throw new TypeError("daniel.db => No key specified");
+        if(!data[key]) throw new TypeError(`daniel.db => The key '${key}' not found in the database`)
+        if (isNaN(data[key])) throw new TypeError("daniel.db => Value in the database must be a valid number");
+        data[key] = 0
+        Database.update(data)
+        return true
     }
     
     static add(key, value) {
