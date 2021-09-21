@@ -70,6 +70,7 @@ class Database {
     }
 
     static all() {
+        const newArr = []
         for(let i of Object.keys(Database.read())) {
             newArr.push({ 
                 ID: i, 

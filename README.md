@@ -1,14 +1,14 @@
 A simple JSON database.
 
-**How to install:**
+# How to install:
 ```bat
 npm install daniel.db
 ```
 
 
-**Methods:**
+# Methods:
 
-*create*
+*create()*
 
 ```js
 const db = require("daniel.db")
@@ -17,7 +17,7 @@ db.create()
 // Done!
 ```
 
-*add*
+*add()*
 
 ```js
 const db = require("daniel.db")
@@ -27,7 +27,7 @@ db.add('joins', 1)
 // If the current value is 1, so the value will be 2.
 ```
 
-*set*
+*set()*
 
 ```js
 const db = require("daniel.db")
@@ -36,7 +36,7 @@ db.set(`name`, 'daniel')
 // Now, the key 'name' will give the value 'daniel'
 ```
 
-*get*
+*get()*
 
 ```js
 const db = require("daniel.db")
@@ -45,7 +45,7 @@ db.get(`name`)
 // Will return 'daniel', because we made a setting with the key 'name' and the value 'daniel'
 ```
 
-*has*
+*has()*
 
 ```js
 const db = require("daniel.db")
@@ -54,7 +54,7 @@ db.has(`name`)
 // If yes, This will return 'true', If no, it will return 'false'.
 ```
 
-*delete*
+*delete()*
 
 ```js
 const db = require("daniel.db")
@@ -63,7 +63,7 @@ db.delete(`name`)
 // Done!
 ```
 
-*deleteAll*
+*deleteAll()*
 
 ```js
 const db = require("daniel.db")
@@ -72,7 +72,7 @@ db.deleteAll()
 // Done!
 ```
 
-*all*
+*all()*
 
 ```js
 const db = require("daniel.db")
@@ -83,7 +83,7 @@ db.all().filter(x => x.ID.startsWith(`name`))
 */
 ```
 
-*push*
+*push()*
 
 ```js
 const db = require("daniel.db")
@@ -92,7 +92,7 @@ db.push(`name`, 'hello') // Will return ['hello'] with 'get' method
 // Done! you can use 'get' method to get the array!
 ```
 
-*reset*
+*reset()*
 
 ```js
 const db = require("daniel.db")
@@ -102,9 +102,4 @@ db.reset(`joins`)
 ```
 
 Need help? Contact me!
-Discord: [**Support Server**](https://discord.gg/aymsQd6VzV)
-<br>
-
-
-
-
+Discord: [**Support Server**](https://discord.gg/ay)
