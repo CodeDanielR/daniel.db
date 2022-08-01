@@ -1,0 +1,20 @@
+{
+  "name": "daniel.db",
+  "version": "2.1.0",
+  "description": "A Simple JSON Database",
+  "main": "Main.ts",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codedanielr/daniel.db.git"
+  },
+  "homepage": "https://github.com/codedanielr/daniel.db#readme",
+  "author": "CodeDanielR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codedanielr/daniel.db/issues"
+  },
+  "dependencies": {}
+}

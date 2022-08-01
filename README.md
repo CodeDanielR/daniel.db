@@ -11,62 +11,48 @@ npm install daniel.db
 *create()*
 
 ```js
-const db = require("daniel.db")
-// Creating the database file 
-db.create()
-// Done!
+const DanielDB = require("daniel.db")
+const db = new DanielDB.Database({ name: "main" })
 ```
 
 *add()*
 
 ```js
-const db = require("daniel.db")
-
-// Addding a value to the current value
+// Increases the current value to the key
 db.add('joins', 1)
-// If the current value is 1, so the value will be 2.
 ```
 
 *set()*
 
 ```js
-const db = require("daniel.db")
-// Setting an value to a key
+// Sets the key to value
 db.set(`name`, 'daniel')
-// Now, the key 'name' will give the value 'daniel'
 ```
 
 *get()*
 
 ```js
-const db = require("daniel.db")
-// Get a value from a key
+// Get a value from the key
 db.get(`name`)
-// Will return 'daniel', because we made a setting with the key 'name' and the value 'daniel'
 ```
 
 *has()*
 
 ```js
-const db = require("daniel.db")
-// Checks if we have key in the database that named 'name'
+// Returns if the database has the provided key
 db.has(`name`)
-// If yes, This will return 'true', If no, it will return 'false'.
 ```
 
 *delete()*
 
 ```js
-const db = require("daniel.db")
 // Deletes a key from the database
 db.delete(`name`)
-// Done!
 ```
 
 *deleteAll()*
 
 ```js
-const db = require("daniel.db")
 // Deletes all the keys in the database
 db.deleteAll()
 // Done!
@@ -76,20 +62,17 @@ db.deleteAll()
 
 ```js
 const db = require("daniel.db")
-// Get all the data in a array
-db.all().filter(x => x.ID.startsWith(`name`))
-/* Returns: 
-{ ID: 'name', value: ['hello] }
-*/
+// Returns an array of objects (ID, data)
+db.all()
+
 ```
 
 *push()*
 
 ```js
 const db = require("daniel.db")
-// Pushing a value to array
-db.push(`name`, 'hello') // Will return ['hello'] with 'get' method
-// Done! you can use 'get' method to get the array!
+// Pushes a value to the array
+db.push(`name`, 'hello')
 ```
 
 *reset()*
