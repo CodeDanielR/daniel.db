@@ -3,11 +3,17 @@ function notFound(val) {
     return modes.includes(val)
 
 }
+
+/**
+* 
+* @param { string } text 
+* @returns TypeError
+*/
 function DanielDBError(text) {
     return new TypeError(`daniel.db => ${text}`)
 }
 
-export default {
+module.exports = {
     notFound,
     DanielDBError
 }

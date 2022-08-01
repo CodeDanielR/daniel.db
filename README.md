@@ -12,7 +12,7 @@ npm install daniel.db
 
 ```js
 const DanielDB = require("daniel.db")
-const db = new DanielDB.Database({ name: "main" })
+const db = new DanielDB({ name: "main" })
 ```
 
 *add()*
@@ -61,7 +61,6 @@ db.deleteAll()
 *all()*
 
 ```js
-const db = require("daniel.db")
 // Returns an array of objects (ID, data)
 db.all()
 
@@ -70,7 +69,6 @@ db.all()
 *push()*
 
 ```js
-const db = require("daniel.db")
 // Pushes a value to the array
 db.push(`name`, 'hello')
 ```
@@ -78,11 +76,18 @@ db.push(`name`, 'hello')
 *reset()*
 
 ```js
-const db = require("daniel.db")
-// Resets a key (Number)
+// Resets the key in the database to 0
 db.reset(`joins`)
-// Done! you can use 'get' method to get '0'!
 ```
 
-Need help? Contact me!
-Discord: [**Support Server**](https://discord.gg/ay)
+**WARNING: ⚠**
+
+If you're using [`nodemon`](httpps://nodemon.io), please use the `--ignore` file to ignore all the json files.
+
+*Example:*
+```bat
+nodemon fileName.js --ignore *.json
+```
+If do you want to run your main file, dont write the `[fileName]` in the command.
+
+Need help? Contact me via [Discord](https://discord.com/users/737232727459495977)!
