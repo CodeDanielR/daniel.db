@@ -1,4 +1,4 @@
-A simple JSON database.
+An easy to use package that makes database with JSON.
 
 # How to install:
 ```bat
@@ -82,7 +82,7 @@ db.reset(`joins`)
 
 **WARNING: ⚠**
 
-If you're using [`nodemon`](httpps://nodemon.io), please use the `--ignore` file to ignore all the json files.
+If you're using [`nodemon`](httpps://nodemon.io), please use the `--ignore` file to ignore all the json files, or else your project will restart every time the database getting updated.
 
 *Example:*
 ```bat
