@@ -1,6 +1,6 @@
 {
   "name": "daniel.db",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An easy to use package that makes database with JSON.",
   "main": "Main.js",
   "scripts": {
