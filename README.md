@@ -90,4 +90,4 @@ nodemon fileName.js --ignore *.json
 ```
 If do you want to run your main file, dont write the `[fileName]` in the command.
 
-Need help? Contact me via [Discord](https://discord.com/users/737232727459495977)!
+Need help? Contact me via [Discord](https://discord.com/users/737232727459495977) or [Email](mailto:admin@codedanielr.tk)!
