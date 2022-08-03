@@ -1,7 +1,7 @@
 {
   "name": "daniel.db",
-  "version": "3.0.0",
-  "description": "A Simple JSON Database",
+  "version": "3.0.1",
+  "description": "An easy to use package that makes database with JSON.",
   "main": "Main.js",
   "scripts": {
     "test": "nodemon test.js --ignore *.json"
