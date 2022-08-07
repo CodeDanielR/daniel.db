@@ -11,7 +11,7 @@ class Database {
      */
     constructor(options) {
         this.options = options
-        this.version = require("../../../package.json").version
+        this.version = require("./package.json").version
         if (!options.name || typeof options.name !== "string" || options.name.length > 16) throw new DanielDBError("Name must be a string with maximum of '16' characters!")
         this.options.name = `/${this.options.name}.json`
         this.init()
